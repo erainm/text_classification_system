@@ -20,11 +20,11 @@ class Config(object):
         self.class_datapath = "./data/class.txt"
 
         # 处理后数据路径
-        self.process_train_datapath = "./process_data/process_train.txt"
-        self.process_test_datapath = "./process_data/process_test.txt"
-        self.process_dev_datapath = "./process_data/process_dev.txt"
-        self.process_dev_num5_datapath = "./process_data/process_dev_num5.txt"
-        self.process_dev_num500_datapath = "./process_data/process_dev_num500.txt"
+        self.process_train_datapath = "./process_data/process_train.csv"
+        self.process_test_datapath = "./process_data/process_test.csv"
+        self.process_dev_datapath = "./process_data/process_dev.csv"
+        self.process_dev_num5_datapath = "./process_data/process_dev_num5.csv"
+        self.process_dev_num500_datapath = "./process_data/process_dev_num500.csv"
 
         # 停用词路径
         self.stop_words_path = "./data/stopwords.txt"

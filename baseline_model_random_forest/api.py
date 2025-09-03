@@ -18,7 +18,6 @@ pd.set_option('display.max_columns', None)
 app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
-
 def predict_api():
     # 获取JSON输入
     data = request.get_json()

@@ -8,7 +8,6 @@
 import jieba
 import pandas as pd
 import pickle
-from pyexpat import features
 from config import Config
 import warnings
 warnings.filterwarnings('ignore')

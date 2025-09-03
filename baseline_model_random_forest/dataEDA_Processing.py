@@ -24,10 +24,12 @@ df = pd.read_csv(current_path, sep="\t", names=["text", "label"])
 def cut_sentence(s):
     """
         对输入文本进行jieba分词，前面了解数据时，已知晓长度大约为30.74，可以设置分词后取30个词并用空格连接
+        lcut(s): 返回列表
         :param s: 输入文本
         :return:
     """
-    return ' '.join(list(jieba.cut(s))[:30])
+    # return ' '.join(list(jieba.cut(s))[:30])
+    return ' '.join(jieba.lcut(s))[:30]
 
 df["words"] = df["text"].apply(cut_sentence)
 
