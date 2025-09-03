@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env_set python
 # -*- coding: UTF-8 -*-
 '''
 @Project     ：text_classification_system
