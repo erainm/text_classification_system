@@ -37,6 +37,6 @@ def predict(data):
     data["pred_class"]=id2class[y_pred[0]]
     return data
 
-if __name__ == '__main__':
-    data = {"text": "体验2D巅峰 倚天屠龙记十大创新概览"}
-    print(predict(data))
+# if __name__ == '__main__':
+#     data = {"text": "体验2D巅峰 倚天屠龙记十大创新概览"}
+#     print(predict(data))
