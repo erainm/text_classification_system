@@ -11,7 +11,7 @@
 import pandas as pd
 import pickle
 from config import Config
-from sklearn.metrics import confusion_matrix, classification_report, precision_score, accuracy_score
+from sklearn.metrics import confusion_matrix, classification_report, precision_score, accuracy_score, recall_score
 # 忽略警告
 import warnings
 warnings.filterwarnings("ignore")
@@ -55,6 +55,7 @@ print("第六步：模型评估...")
 label = dev_df["label"]
 print(f">>> 准确率Accuracy：{accuracy_score(label, dev_predictions)}")
 print(f">>> 精确率Precision：{precision_score(label, dev_predictions, average='micro')}")
+print(f">>> 召回率Recall：{recall_score(label, dev_predictions, average='micro')}")
 
 report = classification_report(label, dev_predictions)
 print(f">>> 混淆矩阵:\n{confusion_matrix(label, dev_predictions)}")
