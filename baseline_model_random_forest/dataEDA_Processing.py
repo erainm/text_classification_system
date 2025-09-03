@@ -14,6 +14,8 @@ from config import Config
 
 config = Config()
 current_path = config.train_datapath
+# current_path = config.dev_datapath
+# current_path = config.dev_datapath_num500
 
 # 第一步：读取数据
 df = pd.read_csv(current_path, sep="\t", names=["text", "label"])

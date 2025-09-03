@@ -8,6 +8,8 @@
 @Author      ：erainm
 @Description : 随机森林模型训练
 '''
+import time
+
 import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
@@ -47,11 +49,15 @@ print(f"特征词表vocab为：{transfer.vocabulary_}")
 x_train, x_test, y_train, y_test = train_test_split(words_features, labels, train_size=0.8, random_state=22)
 # 3.2 使用随机森林模型进行训练
 model = RandomForestClassifier(verbose=1) # 设置 verbose=1 以输出训练进度
-print("随机森林模型正在训练中……")
+train_start_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+print(f"随机森林模型正在训练中……开始时间为:{train_start_time}")
 # 3.3 使用 tqdm 包装 model.fit 来显示进度条
 for _ in tqdm(range(1), desc="RandomForest模型训练进度...."):
     model.fit(x_train, y_train)
 
+train_end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+train_used_time = time.mktime(time.strptime(train_end_time, "%Y-%m-%d %H:%M:%S")) - time.mktime(time.strptime(train_start_time, "%Y-%m-%d %H:%M:%S"))
+print(f"模型训练完成,模型训练结束时间为:{train_end_time}, 模型训练一共耗时:{train_used_time:.2f} 秒")
 # 3.4 模型预测并评估
 print("模型预测评估 ---> ")
 y_pred = model.predict(x_test)

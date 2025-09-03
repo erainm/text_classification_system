@@ -23,7 +23,7 @@ conf = Config()
 
 # 第一步：加载保存的模型和向量化器
 print("第一步：加载模型和向量化器...")
-with open(conf.rf_model_save_path + '/rf_model.pkl', 'rb') as f:
+with open(conf.rf_model_save_path + '/rf_model_.pkl', 'rb') as f:
     model = pickle.load(f)
 with open(conf.rf_model_save_path + '/tfidf_vectorizer.pkl', 'rb') as f:
     tfidf = pickle.load(f)
