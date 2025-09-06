@@ -33,8 +33,8 @@ if not os.path.exists(class_datapath) or not os.path.exists(datapath):
     # exit(1)  # 添加这行来终止程序执行
 
 # 第二步：设置预处理后文件保存路径(确认使用那种处理方式：单字符还是词级别)
-# use_char_segmentation = True
-use_char_segmentation = False
+use_char_segmentation = True
+# use_char_segmentation = False
 if use_char_segmentation:
     # 单字符级文件写入路径
     if 'train' in datapath:

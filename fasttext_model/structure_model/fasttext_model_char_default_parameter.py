@@ -38,4 +38,4 @@ print(f"*模型字词：{model.get_subwords('你')}")
 # 测试集数据路径
 test_datapath = "../process_data_result/test_fasttext_char.txt"
 res = model.test(test_datapath)
-print(res)
+print(f"测试结果: 样本数={res[0]}, 精确率={res[1]:.4f}, 召回率={res[2]:.4f}")
