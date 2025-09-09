@@ -64,6 +64,9 @@ def collate_fn(batch):
     labels = [item[1] for item in batch]
 
     # 批量分词，自动添加 [CLS] 和 [SEP]  add_special_tokens  # padding，统一处理
+    # text_tokens = conf.tokenizer.batch_encode_plus(texts, padding=True)
+    # token_ids_list = text_tokens["input_ids"]
+    # token_attention_mask_list = text_tokens["attention_mask"]
     # 逐个处理每个文本
     input_ids_list = []
     attention_mask_list = []
