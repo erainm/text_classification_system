@@ -17,7 +17,7 @@ conf = Config()
 device = conf.device
 tokenizer = conf.tokenizer
 model = BertClassifier().to(device)
-model.load_state_dict(torch.load("../save_models/bert20250521_.pt"))
+model.load_state_dict(torch.load(conf.save_model_path))
 model.eval()
 
 #预测函数
